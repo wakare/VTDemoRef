@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CE4BBCAB-4AC2-484F-9383-75BE5D95547C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VirtualTextureDemo</RootNamespace>
+    <AssemblyName>VirtualTextureDemo</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SlimDX, Version=2.0.13.43, Culture=neutral, PublicKeyToken=b1b0c32fd1ffe4f9, processorArchitecture=AMD64" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Concurrency\ConcurrentQueue.cs" />
+    <Compile Include="Helpers\FirstPersonCameraInput.cs" />
+    <Compile Include="VirtualTexturing\TileDataFile.cs" />
+    <Compile Include="Generator\TileGenProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Generator\TileGenProgress.Designer.cs">
+      <DependentUpon>TileGenProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Math.cs" />
+    <Compile Include="Helpers\Direct3D\StagingTexturePool.cs" />
+    <Compile Include="Demo\DemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Demo\DemoPresets.cs" />
+    <Compile Include="Concurrency\ProcessingThread.cs" />
+    <Compile Include="Demo\DemoInfo.cs" />
+    <Compile Include="Demo\Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Demo\Options.Designer.cs">
+      <DependentUpon>Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Direct3D\Texture.cs" />
+    <Compile Include="Helpers\Direct3D\DepthBuffer.cs" />
+    <Compile Include="Helpers\Direct3D\RenderTarget.cs" />
+    <Compile Include="Helpers\Direct3D\WriteTexture.cs" />
+    <Compile Include="Imaging\SimpleImage.cs" />
+    <Compile Include="Imaging\RawImage.cs" />
+    <Compile Include="Helpers\Memory.cs" />
+    <Compile Include="Imaging\TargaImage.cs" />
+    <Compile Include="IGame\MapChannel.cs" />
+    <Compile Include="IGame\Mesh.cs" />
+    <Compile Include="IGame\Scene.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="VirtualTexturing\Page.cs" />
+    <Compile Include="VirtualTexturing\PageIndexer.cs" />
+    <Compile Include="VirtualTexturing\PageLoader.cs" />
+    <Compile Include="VirtualTexturing\TextureAtlas.cs" />
+    <Compile Include="Collections\LruCollection.cs" />
+    <Compile Include="VirtualTexturing\PageCache.cs" />
+    <Compile Include="VirtualTexturing\Quadtree.cs" />
+    <Compile Include="VirtualTexturing\VirtualTexture.cs" />
+    <Compile Include="Generator\TileGenerator.cs" />
+    <Compile Include="Helpers\InputHelper.cs" />
+    <Compile Include="Camera.cs" />
+    <Compile Include="FeedbackBuffer.cs" />
+    <Compile Include="VirtualTexturing\PageTable.cs" />
+    <Compile Include="VirtualTextureDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VirtualTexturing\VirtualTextureInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Effects\Default.fx">
+      <Link>Effects\Default.fx</Link>
+    </None>
+    <None Include="..\Effects\Samplers.fxh">
+      <Link>Effects\Samplers.fxh</Link>
+    </None>
+    <None Include="..\Effects\States.fxh">
+      <Link>Effects\States.fxh</Link>
+    </None>
+    <None Include="..\Effects\VirtualTexture.fxh">
+      <Link>Effects\VirtualTexture.fxh</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Generator\TileGenProgress.resx">
+      <DependentUpon>TileGenProgress.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Demo\Options.resx">
+      <DependentUpon>Options.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)" "$(SolutionDir)..\$(TargetFileName)"
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>

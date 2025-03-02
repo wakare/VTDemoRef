@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<IGame xmlns="urn:maxxml" Version="2.0" Date="Wed Nov 11 11:30:30 2009">
+	<SceneInfo FileName="Complete06.max" StartFrame="0" EndFrame="100" FrameRate="30" TicksPerFrame="160" CoordinateSystem="directx" RotationFormat="Quaternion" ObjectSpace="false"></SceneInfo>
+	<MaterialList Count="1">
+		<Material Index="0" Name="01 - Default" Class="Standard">
+			<Diffuse Value="0.588235 0.588235 0.588235"></Diffuse>
+			<Ambient Value="0.588235 0.588235 0.588235"></Ambient>
+			<Specular Value="0.900000 0.900000 0.900000"></Specular>
+			<Glossiness Value="0.100000"></Glossiness>
+			<Opacity Value="1.000000"></Opacity>
+			<SpecularLevel Value="0.000000"></SpecularLevel>
+			<TextureMaps Count="1">
+				<Texture Index="0" Name="Map #2" Slot="Ambient">
+					<BitmapTexture Filename="S$/Projects/VirtualTextureDemo/NonRelease/Complete_8k.tga">
+						<ClipU Value="0.000000"></ClipU>
+						<ClipV Value="0.000000"></ClipV>
+						<ClipW Value="1.000000"></ClipW>
+						<ClipH Value="1.000000"></ClipH>
+					</BitmapTexture>
+				</Texture>
+			</TextureMaps>
+		</Material>
+	</MaterialList>
+	<Node Name="Plane02" NodeID="491" MaterialIndex="0" NodeType="Mesh">
+		<NodeTM>
+			<Translation>
+				-67.072556 0.788949 94.762451
+			</Translation>
+			<Rotation>
+				-0.000000 -0.707107 -0.000000 0.707107
+			</Rotation>
+			<Scale>
+				1.000000 1.000000 1.000000 -0.000000 -0.000000 -0.000000 1.000000
+			</Scale>
+		</NodeTM>
+		<Mesh>
+			<Vertices Count="4">
+				-87.072556 0.788949 114.762451 
+				-87.072556 0.788949 74.762451 
+				-47.072556 0.788949 114.762451 
+				-47.072556 0.788949 74.762451 
+			</Vertices>
+			<Normals Count="4">
+				0.000000 1.000000 0.000000 
+				0.000000 1.000000 0.000000 
+				0.000000 1.000000 0.000000 
+				0.000000 1.000000 0.000000 
+			</Normals>
+			<Faces Count="2">
+				<FaceVertices>
+					 2 3 0
+					 1 0 3
+				</FaceVertices>
+				<FaceNormals>
+					 0 2 1
+					 3 1 2
+				</FaceNormals>
+				<MaterialIDs>
+					 0
+					 0
+				</MaterialIDs>
+				<SmoothingGroups>
+					 1
+					 1
+				</SmoothingGroups>
+				<EdgeVisibility>
+					 1 0 1
+					 1 0 1
+				</EdgeVisibility>
+			</Faces>
+			<MapChannels Count="1">
+				<MapChannel ID="1" Type="Texture">
+					<MapVertices Count="8" Dimension="3">
+						 0.000000 0.000000 0.000000
+						 1.000000 0.000000 0.000000
+						 0.000000 0.000000 0.000000
+						 1.000000 0.000000 0.000000
+						 0.000000 0.000000 0.000000
+						 1.000000 0.000000 0.000000
+						 0.000000 1.000000 0.000000
+						 1.000000 1.000000 0.000000
+					</MapVertices>
+					<MapFaces Count="2">
+						 6 7 4
+						 5 4 7
+					</MapFaces>
+				</MapChannel>
+			</MapChannels>
+		</Mesh>
+	</Node>
+</IGame>

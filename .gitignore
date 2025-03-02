@@ -1,0 +1,6 @@
+*.exe
+*.cache
+*.tga
+*.raw
+VirtualTextureDemo_1.02/Source/.idea/
+ VirtualTextureDemo_1.02/Source/.vs
