@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Concurrency\ConcurrentQueue.cs" />
     <Compile Include="Helpers\FirstPersonCameraInput.cs" />
+    <Compile Include="Imaging\PNGImage.cs" />
     <Compile Include="VirtualTexturing\TileDataFile.cs" />
     <Compile Include="Generator\TileGenProgress.cs">
       <SubType>Form</SubType>

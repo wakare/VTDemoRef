@@ -64,7 +64,7 @@ namespace VirtualTextureDemo
 
 			int size = info.PageTableSize;
 			texture = new Direct3D.Texture( device, size, size, DXGI.Format.R8G8B8A8_UNorm, D3D10.ResourceUsage.Default, 0 );
-			staging = new Direct3D.WriteTexture( device, size, size, DXGI.Format.R8G8B8A8_UNorm );
+			//staging = new Direct3D.WriteTexture( device, size, size, DXGI.Format.R8G8B8A8_UInt );
 
 			cache.Added   += ( Page page, Point pt ) => quadtree.Add( page, pt );
 			cache.Removed += ( Page page, Point pt ) => quadtree.Remove( page );
@@ -75,7 +75,7 @@ namespace VirtualTextureDemo
 		public void Dispose()
 		{
 			texture.Dispose();
-			staging.Dispose();
+			//staging.Dispose();
 
 			for( int i = 0; i < tabledata.Length; ++i )
 				tabledata[i].Data.Dispose();

@@ -72,7 +72,7 @@ namespace VirtualTextureDemo
 			string errors = string.Empty;
 			try
 			{
-                effect = D3D10.Effect.FromFile( device, "D:\\Work\\DevSpace\\VirtualTextureDemo_1.02\\Effects\\Default.fx", "fx_4_0", shaderflags, SlimDX.D3DCompiler.EffectFlags.None, null, null, null, out errors );
+                effect = D3D10.Effect.FromFile( device, "D:\\VTDemo\\VTDemoRef\\VirtualTextureDemo_1.02\\Effects\\Default.fx", "fx_4_0", shaderflags, SlimDX.D3DCompiler.EffectFlags.None, null, null, null, out errors );
 			}
 
 			catch

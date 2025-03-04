@@ -11,3 +11,15 @@ D:\Work\DevSpace\VirtualTextureDemo_1.02\Source\bin\Debug\SlimDX.xml
 D:\Work\DevSpace\VirtualTextureDemo_1.02\Source\obj\Debug\VirtualT.ED094B47.Up2Date
 D:\Work\DevSpace\VirtualTextureDemo_1.02\Source\obj\Debug\VirtualTextureDemo.exe
 D:\Work\DevSpace\VirtualTextureDemo_1.02\Source\obj\Debug\VirtualTextureDemo.pdb
+D:\VTDemo\VTDemoRef\VirtualTextureDemo_1.02\Source\bin\Debug\VirtualTextureDemo.exe
+D:\VTDemo\VTDemoRef\VirtualTextureDemo_1.02\Source\bin\Debug\VirtualTextureDemo.pdb
+D:\VTDemo\VTDemoRef\VirtualTextureDemo_1.02\Source\bin\Debug\SlimDX.pdb
+D:\VTDemo\VTDemoRef\VirtualTextureDemo_1.02\Source\bin\Debug\SlimDX.xml
+D:\VTDemo\VTDemoRef\VirtualTextureDemo_1.02\Source\obj\Debug\VirtualTexture.csproj.AssemblyReference.cache
+D:\VTDemo\VTDemoRef\VirtualTextureDemo_1.02\Source\obj\Debug\VirtualTextureDemo.TileGenProgress.resources
+D:\VTDemo\VTDemoRef\VirtualTextureDemo_1.02\Source\obj\Debug\VirtualTextureDemo.Options.resources
+D:\VTDemo\VTDemoRef\VirtualTextureDemo_1.02\Source\obj\Debug\VirtualTexture.csproj.GenerateResource.cache
+D:\VTDemo\VTDemoRef\VirtualTextureDemo_1.02\Source\obj\Debug\VirtualTexture.csproj.CoreCompileInputs.cache
+D:\VTDemo\VTDemoRef\VirtualTextureDemo_1.02\Source\obj\Debug\VirtualT.ED094B47.Up2Date
+D:\VTDemo\VTDemoRef\VirtualTextureDemo_1.02\Source\obj\Debug\VirtualTextureDemo.exe
+D:\VTDemo\VTDemoRef\VirtualTextureDemo_1.02\Source\obj\Debug\VirtualTextureDemo.pdb

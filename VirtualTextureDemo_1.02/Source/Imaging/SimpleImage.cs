@@ -92,7 +92,7 @@ namespace VirtualTextureDemo
 				{
 					int index = channels*((y*2)*size+(x*2)) + c;
 					
-					int sum_value = 4 >> 1;
+					int sum_value = 0;
 					sum_value += source[index + channels*(0*size+0)];
 					sum_value += source[index + channels*(0*size+1)];
 					sum_value += source[index + channels*(1*size+0)];

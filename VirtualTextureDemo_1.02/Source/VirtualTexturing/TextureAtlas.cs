@@ -76,9 +76,27 @@ namespace VirtualTextureDemo
 
 			int pagesize = info.PageSize;
 			
+			// Test
+			/*
+			 for( int y = 0; y < pagesize; ++y )
+			{
+				byte[] debug_data = new byte[pagesize * VirtualTexture.ChannelCount];
+				for (int x = 0; x < pagesize; ++x)
+				{
+					byte test_value = (byte)(255.0f * x / pagesize);
+					debug_data[x * VirtualTexture.ChannelCount] = test_value;
+					debug_data[x * VirtualTexture.ChannelCount + 1] = test_value;
+					debug_data[x * VirtualTexture.ChannelCount + 2] = test_value;
+					debug_data[x * VirtualTexture.ChannelCount + 3] = 255;
+				}
+				rect.Data.WriteRange( debug_data, 0, pagesize * VirtualTexture.ChannelCount );
+				rect.Data.Position += rect.Pitch - pagesize * VirtualTexture.ChannelCount;
+			}
+			*/
+			
 			for( int y = 0; y < pagesize; ++y )
 			{
-				rect.Data.WriteRange( data, y*pagesize * VirtualTexture.ChannelCount, pagesize * VirtualTexture.ChannelCount );
+				rect.Data.WriteRange( data, y * pagesize * VirtualTexture.ChannelCount, pagesize * VirtualTexture.ChannelCount );
 				rect.Data.Position += rect.Pitch - pagesize * VirtualTexture.ChannelCount;
 			}
 
