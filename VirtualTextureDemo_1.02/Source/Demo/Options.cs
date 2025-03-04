@@ -85,7 +85,7 @@ namespace VirtualTextureDemo
 			//ll_url.Click += ( sender, e ) => System.Diagnostics.Process.Start( "http://www.linedef.com/personal/demos/?p=virtual-texturing" );
 			ll_url.Click += ( sender, e ) => System.Diagnostics.Process.Start( "http://www.linedef.com" );
 
-			b_browse_texture.Click  += ( sender, e ) => OpenFile( "All Types (*.tga,*.raw)|*.raw;*.tga|Targa Files (*.tga)|*.tga|Raw Image (*.raw)|*.raw|All Files (*.*)|*", tb_texture );
+			b_browse_texture.Click  += ( sender, e ) => OpenFile( "All Types (*.png)|*.png|All Files (*.*)|*", tb_texture );
 			b_browse_geometry.Click += ( sender, e ) => OpenFile( "3dsmax IGame Export (*.xml)|*.xml|All Files (*.*)|*.*", tb_geometry );
 
 			tb_texture.TextChanged += new EventHandler( tb_texture_TextChanged );

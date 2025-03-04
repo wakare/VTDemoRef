@@ -102,6 +102,7 @@ RasterizerState EnableMSAA
 
 float VirtualTextureSize;	// This size of the virtual texture
 float PageTableSize;		// The size of the page table (VirtualTextureSize/PageSize)
+float PageSize;
 
 float AtlasScale;			// This value is used to scale the uv to the texture atlas. It holds (PageSize/TextureAtlasSize)
 
@@ -134,19 +135,20 @@ float3 SampleTable(float2 uv, float mip)
 // This functions samples from the texture atlas and returns the final color
 float4 SampleAtlas(float3 page, float2 uv)
 {
-    const float mipsize = exp2(floor(page.z * 255.0 + 0.5));
-    uv = frac(uv * PageTableSize / mipsize);
+    //const float mipsize = exp2(floor(page.z * 255.0 + 0.5));
+    //uv = frac(uv * PageTableSize / mipsize);
 
-    //const float tilesize = VirtualTextureSize / PageTableSize;
-    //const float mipsize = VirtualTextureSize / exp2(floor(page.z * 255.0 + 0.5));
-    //uv = fmod(uv * mipsize, tilesize) / tilesize;
+    const float tilesize = VirtualTextureSize / PageTableSize;
+    const float mipsize = VirtualTextureSize / exp2(floor(page.z * 255.0 + 0.5));
+    uv = (fmod(uv * mipsize, tilesize)) / tilesize;
 
 	uv *= BorderScale;
 	uv += BorderOffset;
 
 	const float2 offset = floor(page.xy * 255 + 0.5);
 
-	return TextureAtlas.Sample(LinearClampSampler, (offset + uv) * AtlasScale);
+	//return TextureAtlas.Sample(LinearClampSampler, (offset + uv) * AtlasScale);
+	return TextureAtlas.Sample(PointClampSampler, (offset + uv) * AtlasScale);
 }
 
 // Ugly brute force trilinear, look up twice and lerp
@@ -216,7 +218,7 @@ float4 PS_Final( PS_IN input ) : SV_Target
 // It returns the required page coordinates and mip level of the frame.
 float4 PS_Feedback( PS_IN input ) : SV_Target
 {
-	float  mip  = floor( MipLevel( input.uv, VirtualTextureSize )  );
+	float  mip  = floor( MipLevel( input.uv, VirtualTextureSize ) - MipBias );
 	mip = clamp( mip, 0, log2( PageTableSize ) );
 
 	const float2 offset = floor( input.uv * PageTableSize );

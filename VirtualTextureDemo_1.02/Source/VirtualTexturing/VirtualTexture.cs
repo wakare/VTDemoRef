@@ -110,6 +110,7 @@ namespace VirtualTextureDemo
 
 			effect.GetVariableByName( "VirtualTextureSize" ).AsScalar().Set( (float)info.VirtualTextureSize );
 
+			effect.GetVariableByName( "PageSize" ).AsScalar().Set( pagesize );
 			effect.GetVariableByName( "AtlasScale" ).AsScalar().Set( 1.0f/atlascount );
 
 			effect.GetVariableByName( "BorderScale" ).AsScalar().Set( (pagesize-2.0f*info.BorderSize)/pagesize );
